@@ -1,3 +1,6 @@
+import { config } from 'dotenv';
+config(); // Carrega as variáveis de ambiente do arquivo .env para process.env
+
 import { DataSource } from 'typeorm';
 import { ShoppingList } from './entities/shopping-list.entity';
 import { User } from './entities/user.entity';
