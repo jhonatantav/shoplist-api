@@ -2,6 +2,7 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
+  "synchronize": true,
   "username": "adminusermaster",
   "password": "masterpass5466",
   "database": "shoppinglist",
