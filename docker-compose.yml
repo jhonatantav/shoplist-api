@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: adminusermaster
+      POSTGRES_PASSWORD: masterpass5466
+      POSTGRES_DB: shoppinglist
+    ports:
+      - '5432:5432'
+
+  app:
+    build: .
+    command: npm run start:dev
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
